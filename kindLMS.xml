@@ -1,66 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="1.6.0" method="upgrade">
-    <name>com_kindLMS</name>
-    <creationDate>2012-10-15</creationDate>
-    <copyright>Copyright (C) 2012. All rights reserved.</copyright>
-    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <author>KindFinch</author>
-    <authorEmail>admin@kindfinch.com</authorEmail>
-    <authorUrl></authorUrl>
-    <version>1.0.0</version>
-    <description>OpenSource Learning Management System</description>
-    
-    <install> <!-- Runs on install -->
-        <sql>
-            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
-        </sql>
-    </install>
-    <uninstall> <!-- Runs on uninstall -->
-        <sql>
-            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
-        </sql>
-    </uninstall>
-
-    <files folder="site">
-        <filename>index.html</filename>
-        <filename>kindLMS.php</filename>
-        <filename>controller.php</filename>
-        <filename>router.php</filename>
-        <folder>views</folder>
-        <folder>models</folder>
-        <folder>controllers</folder>
-        <folder>helpers</folder>
+<extension type="component" version="2.5" method="upgrade">
+  <name>com_kindLMS</name>
+  <creationDate>15-Oct-2012</creationDate>
+  <author>KindFinch</author>
+  <authorEmail>admin@kindfinch.com</authorEmail>
+  <authorUrl></authorUrl>
+  <copyright>Copyright (C) 2012. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <version>1.0.0</version>
+  <description>OpenSource Learning Management System</description>
+  <scriptfile/>
+  <install>
+    <sql/>
+  </install>
+  <uninstall>
+    <sql/>
+  </uninstall>
+  <update>
+    <schemas/>
+  </update>
+  <files folder="site">
+    <folder>controllers</folder>
+    <folder>helpers</folder>
+    <folder>language</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>kindLMS.php</filename>
+    <filename>router.php</filename>
+  </files>
+  <administration>
+    <menu img="components/com_kindLMS/assets/images/s_com_kindLMS.png">COM_KINDLMS</menu>
+    <files folder="administrator">
+      <folder>assets</folder>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>install</folder>
+      <folder>language</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>kindLMS.php</filename>
     </files>
-    <languages folder="site">
-        <language tag="en-GB">language/en-GB.com_kindLMS.ini
-        </language>
-    </languages>
-    <administration>
-        <menu img="components/com_kindLMS/assets/images/s_com_kindLMS.png" >COM_KINDLMS</menu>
-        <submenu>
-            
-        </submenu>
-        <files folder="administrator">
-            <filename>access.xml</filename>
-            <filename>config.xml</filename>
-            <filename>controller.php</filename>
-            <filename>index.html</filename>
-            <filename>kindLMS.php</filename>
-            <folder>controllers</folder>
-            <folder>assets</folder>
-            <folder>helpers</folder>
-            <folder>models</folder>
-            <folder>sql</folder>
-            <folder>tables</folder>
-            <folder>views</folder>
-        </files>
-        <languages folder="administrator">
-            <language tag="en-GB">language/en-GB.com_kindLMS.ini
-            </language>
-            <language tag="en-GB">language/en-GB.com_kindLMS.sys.ini
-            </language>
-        </languages>
-    </administration>
+  </administration>
 </extension>
-<!-- Component built by the Joomla Component Creator -->
-<!-- http://www.notwebdesign.com/joomla-component-creator/ -->
